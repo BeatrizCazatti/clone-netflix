@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início - Netflix</title>
+    <link rel="shortcut icon" href="img/icone-netflix.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+</head>
+<body>    
+    <div id="navbar">
+        <img id='logo-netflix' src="img/logo-netflix.png" alt="logo da Netflix" onmouseup="mostrarPerfilSele()">
+        <div id="list-navigation">
+            <ul>
+                <li>
+                    Início
+                </li>
+                <li>
+                    Séries
+                </li>
+                <li>
+                    Filmes
+                </li>
+                <li>
+                    Bombando
+                </li>
+                <li>
+                    Minha Lista
+                </li>
+            </ul>
+        </div>
+        <div id="navegar" onmouseenter="navegationUp()" onmouseleave="navegationClose()">
+            Navegar
+        </div>
+        <div id="box-navegation" class="esconder" onmouseenter="navegationUp()" onmouseleave="navegationClose()">
+            <ul>
+                <li>
+                    Início
+                </li>
+                <li>
+                    Séries
+                </li>
+                <li>
+                    Filmes
+                </li>
+                <li>
+                    Bombando
+                </li>
+                <li>
+                    Minha Lista
+                </li>
+                
+            </ul>
+
+        </div>
+        <div class="search">
+            <i class="fas fa-search" onclick="animacaoSearch()"></i>
+            <input onblur="animacaoSearch()" type="text" name="search" id="search" placeholder="Search">
+        </div>
+
+        <div class="notifications" onmouseenter="notificationsUp()" onmouseleave="notificationsClose()">
+            <i class="fas fa-bell" id="bell"></i>
+            <div class="point"></div>
+            <div class="box-notifications box-notifications-start esconder">
+                <ul>
+                    <li>
+                        <img src="img/noti/1.jpg" alt="">
+                        <div class="block">
+                            <p>Novos episódios de Perdidos no Espaço.</p>
+                            <p id="status">há 3 dias</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/noti/2.webp" alt="">
+                        <div class="block">
+                            <p>Sugestões de filmes.</p>
+                            <p id="status">há 1 semana</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/noti/3.webp" alt="">
+                        <div class="block">
+                            <p>Assista novamente Os Caras de Pau.</p>
+                            <p id="status">há 1 mês</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="perfil" onmouseenter="perfilUp()" onmouseleave="perfilClose()">
+            <img src="img/perfis/1.png" alt="" id="perfil" onmouseup="mudarImgPerfil()">
+            <span class="set"></span>
+            <div class="box-perfil esconder" onmouseenter="perfilUp()" onmouseleave="perfilClose()">
+                <ul>
+                    <li>
+                        <img src="img/perfis/1.png" alt="">
+                        <p>Rogéria</p>
+                </li>
+                <li>
+                    <img src="img/perfis/2.png" alt="">
+                    <p>Geovana</p>
+                </li>
+                <li>
+                    <img src="img/perfis/3.png" alt="">
+                    <p>Zé</p>
+                </li>
+                <li>
+                    <p id="gerenciar-perfis">Gerenciar perfis</p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <p><strong>Conta</strong></p>
+                </li>
+                <li>
+                    <p><strong>Centro de ajuda</strong></p>
+                </li>
+                <li>
+                    <p><strong>Sair da Netflix</strong></p>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+
+    <div class="trailer">
+        <video autoplay muted class="video" poster="img/imagem-de-fundo.jpg" onended="videoTerminado()">
+            <source src="img/trailer-mais-q-amigos-vizinhos.mp4">
+        </video>
+        <div class="prewie" onmouseup="backgroundVideo()">
+                <img src="img/logo-filme.webp" alt="Mais que amigos: vizinhos" class="logo-filme">
+            <div id="text-trailer">
+                <p>Quando Paris entra em lockdown durante a pandemia, os excêntricos moradores de um prédio precisam se adaptar a uma nova vida — e uns aos outros!</p>
+            </div>
+            <div id="buttons">
+                <button id="bt-assistir">
+                <i class="fas fa-play" onclick="assistir()"></i>
+                <span>Assistir</span> 
+                </button>
+                <button id="bt-info">
+                    <i class="fas fa-info" onclick="maisinfo()"></i>
+                    <span>Mais Informações</span>    
+                </button>
+            </div>
+            <div id="label">
+                <div id="sound">
+                    <i class="fas fa-volume-up" onclick="sound()"></i>
+                    <i class="fas fa-volume-mute" onclick="sound()"></i>
+                    <i class="fas fa-redo" onclick="replay()"></i>
+                </div>
+                <div id="classification">
+                    <img src="img/classificacao-12-anos.png" alt="Classificação 12 anos">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="catalogo">
+        <div class="cat">
+            <h3 id="specific-text">Comédias Brasileiras</h3>
+            <div class="owl-carousel owl-theme">
+                <div class="item" ><img id="mv-mini1" src="img/cat-1/mini1.jpg" alt=""></div>
+                <div class="item"><img src="img/cat-1/mini2.jpg" alt=""></div>
+                <div class="item"><img src="img/cat-1/mini3.jpg" alt=""></div>
+                <div class="item"><img src="img/cat-1/mini4.webp" alt=""></div>
+                <div class="item"><img src="img/cat-1/mini5.jpg" alt=""></div>
+                <div class="item"><img src="img/cat-1/mini6.webp" alt=""></div>
+                <div class="item"><img src="img/cat-1/mini7.webp" alt=""></div>
+                <div class="item"><img src="img/cat-1/mini8.webp" alt=""></div>
+            </div>
+        </div>
+        <div class="cat">
+            <h3>Séries</h3>
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="img/cat-2/mini1.jpg" alt=""></div>
+                <div class="item"><img src="img/cat-2/mini2.jpg" alt=""></div>
+                <div class="item"><img src="img/cat-2/mini3.jpg" alt=""></div>
+                <div class="item"><img src="img/cat-2/mini4.jpg" alt=""></div>
+                <div class="item"><img src="img/cat-2/mini5.jpg" alt=""></div>
+                <div class="item"><img src="img/cat-2/mini6.jpg" alt=""></div>
+                <div class="item"><img src="img/cat-2/mini7.jpg" alt=""></div>
+            </div>
+        </div>
+        <div class="cat">
+            <h3>Para toda a família</h3>
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="img/cat-3/mini1.webp" alt=""></div>
+                <div class="item"><img src="img/cat-3/mini2.jpg" alt=""></div>
+                <div class="item"><img src="img/cat-3/mini3.webp" alt=""></div>
+                <div class="item"><img src="img/cat-3/mini4.jpg" alt=""></div>
+                <div class="item"><img src="img/cat-3/mini5.webp" alt=""></div>
+                <div class="item"><img src="img/cat-3/mini6.webp" alt=""></div>
+            </div>
+        </div>
+        <div class="cat">
+            <h3>Animações</h3>
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="img/cat-5/mini1.webp" alt=""></div>
+                <div class="item"><img src="img/cat-5/mini2.jpg" alt=""></div>
+                <div class="item"><img src="img/cat-5/mini3.webp" alt=""></div>
+                <div class="item"><img src="img/cat-5/mini4.jpg" alt=""></div>
+                <div class="item"><img src="img/cat-5/mini5.webp" alt=""></div>
+                <div class="item"><img src="img/cat-5/mini6.jpg" alt=""></div>
+
+            </div>
+        </div>
+        <div class="cat">
+            <h3>Assistir novamente</h3>
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="img/cat-4/mini1.jpg" alt=""></div>
+                <div class="item"><img src="img/cat-4/mini2.webp" alt=""></div>
+                <div class="item"><img src="img/cat-4/mini3.jpg" alt=""></div>
+                <div class="item"><img src="img/cat-4/mini4.webp" alt=""></div>
+                <div class="item"><img src="img/cat-4/mini5.webp" alt=""></div>
+                <div class="item"><img src="img/cat-4/mini6.jpg" alt=""></div>
+                <div class="item"><img src="img/cat-4/mini7.webp" alt=""></div>
+            </div>
+        </div>
+        <div class="cat">
+            <h3>Populares</h3>
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="img/tmdb/post-1.jpg" alt=""></div>
+                <div class="item"><img src="img/tmdb/post-2.jpg" alt=""></div>
+                <div class="item"><img src="img/tmdb/post-3.jpg" alt=""></div>
+                <div class="item"><img src="img/tmdb/post-4.jpg" alt=""></div>
+                <div class="item"><img src="img/tmdb/post-5.jpg" alt=""></div>
+                <div class="item"><img src="img/tmdb/post-6.jpg" alt=""></div>
+                <div class="item"><img src="img/tmdb/post-7.jpg" alt=""></div>
+                <div class="item"><img src="img/tmdb/post-8.jpg" alt=""></div>
+                <div class="item"><img src="img/tmdb/post-9.jpg" alt=""></div>
+                <div class="item"><img src="img/tmdb/post-10.jpg" alt=""></div>
+                <div class="item"><img src="img/tmdb/post-11.jpg" alt=""></div>
+                <div class="item"><img src="img/tmdb/post-12.jpg" alt=""></div>
+                <div class="item"><img src="img/tmdb/post-13.jpg" alt=""></div>
+                <div class="item"><img src="img/tmdb/post-14.jpg" alt=""></div>
+                <div class="item"><img src="img/tmdb/post-15.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div id="social">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
+        <ul>
+            <li>
+                Idioma e Legendas
+            </li>
+            <li>
+                Centro de ajuda
+            </li>
+            <li>
+                Cartão pré-pago
+            </li>
+            <li>
+                Audiodescrição
+            </li>
+            <li>
+                Imprensa
+            </li>
+            <li>
+                Informações corporativas
+            </li>
+            <li>
+                Relações com Investidores
+            </li>
+            <li>
+                Termos de uso
+            </li>
+            <li>
+                Privacidade
+            </li>
+            <li>
+                Avisos legais
+            </li>
+            <li>
+                Preferências de cookies
+            </li>
+            <li>
+                Entre em contato
+            </li>
+        </ul>
+        <div id="button">
+            Codigo do Serviço
+        </div>
+        <p>© 2021 Criado por <a href="">BeatrizCazati</a></p>
+    </footer>
+
+
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

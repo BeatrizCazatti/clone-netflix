@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icone-netflix.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style-login.css">
+    <title>Netflix</title>
+</head>
+<body>
+    <div id="topo">
+        <img id='logo' src="img/logo-netflix.png" alt="logo da Netflix">
+    </div>
+    <div id="center">
+        <div id="ltr">
+            <h1>Quem está assistindo?</h1>
+            <div id="list-perfis">
+                <a href="index.html">
+                    <div class="perfil" onmouseenter="hoverMouseEnterPerfil(0)" onmouseleave="hoverMouseLeavePerfil(0)">
+                        <img src="img/perfis/1.png" alt="">
+                        <p>Beatriz</p>
+                    </div>
+                </a>
+                <a href="index.html">
+                    <div class="perfil" onmouseenter="hoverMouseEnterPerfil(1)" onmouseleave="hoverMouseLeavePerfil(1)">
+                        <img src="img/perfis/2.png" alt="">
+                        <p>Rogéria</p>
+                    </div>
+                </a>
+                <a href="index.html">
+                    <div class="perfil" onmouseenter="hoverMouseEnterPerfil(2)" onmouseleave="hoverMouseLeavePerfil(2)">
+                        <img src="img/perfis/3.png" alt="">
+                        <p>Geovana</p>
+                    </div>
+                </a>
+                <a href="index.html">
+                    <div class="perfil" onmouseenter="hoverMouseEnterPerfil(3)" onmouseleave="hoverMouseLeavePerfil(3)">
+                        <img src="img/perfis/4.png" alt="">
+                        <p>José</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div id="add-perfil">
+                        <div id="add-perfil-circle">
+                            <div id="circle" onmouseenter="hoverMouseEnterPerfil(4)" onmouseleave="hoverMouseLeavePerfil(4)">
+                                <div id="mais"></div>
+                            </div>
+                        </div>
+                        <p onmouseenter="hoverMouseEnterPerfil(4)" onmouseleave="hoverMouseLeavePerfil(4)" >Adicionar perfil</p>
+                    </div>
+                </a>
+            </div>
+            <div id="button-gerenciar-perfis">
+                Gerenciar perfis
+            </div>
+    </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
