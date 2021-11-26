@@ -10,6 +10,7 @@ Trata-se da parte front-end da página principal e de perfis da Netflix, que col
  
 ## Prewie da página:
 ![Prewie da página](https://github.com/BeatrizCazatti/clone-netflix/blob/main/img/screenshot-netflix.jpg)
+Link da página: https://clone-netflix-bcf.netlify.app/
 
 ## Construido com:
 - HTML;
